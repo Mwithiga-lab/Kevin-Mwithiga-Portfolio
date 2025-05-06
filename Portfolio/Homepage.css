@@ -1,0 +1,115 @@
+/* Title */
+.name {}
+
+/* Whole body */
+#body{
+   flex-wrap:wrap;
+   background-color: #0a192f;
+   display:flex;
+   justice-content:center;
+   min-height:100vh;
+   color: #ccd6f6;
+   margin:0;
+   padding:20px;
+   font-family:Arial, san-serif;
+   line-height:1.6;
+}
+
+/* All buttons */
+#buttons {
+    display:flex;
+    gap:20px;
+    margin-bottom:40px;
+    font size:14px;
+    text-transform:uppercase;
+    letter-spacing:1px;
+    justice-content:center;
+    padding:20px;
+    align-item:center;
+    background-color:#172a45;
+}
+    
+#buttons button:hover {
+    color:#64ffda;
+    transform:translateY(-3px);
+}
+
+.btn.projects{}
+
+.btn.skills&resume{}
+
+.btn.contact{}
+
+/* Homepage Section */
+#Homepage {    
+    display:flex;
+    max-width:1200;
+    margin:0 auto;
+    padding:60px;
+    background-color:#172a45;
+    border-radius:8px;
+    box shadow:0 10px 30px -15px rgba(2,12,27,0.7);
+}
+
+/* introduction */
+.introduction {
+    font-size:32px;
+    font-weight:700;
+    margin-bottom:30px
+    letter-spacing:1px;
+    text-align:left;
+    color:#e6f1ff;    
+}
+
+.introduction ::before {
+    content:"I AM";
+    display:block;
+    font-size:1rem;
+    color:#64ffda;
+    margin-bottom:10px;
+}
+
+/* Left side */
+.left-side {
+    display:flex;
+    flex-direction:column;
+    align-items:flex-start;
+    padding-right:60px;
+    position:relative;
+    width:40%;
+}
+
+/* Vertical line */
+.left-side ::after {
+    content:"";
+    position:absolute;
+    right:0;
+    bottom:0;
+    top:0;
+    width:1px
+    background-color:#303C55;
+}
+
+/* Right side */
+.right-side{
+    padding-left:40px;
+    flex:1;
+}
+
+/* Profile-photo */
+.profile-photo{
+    text-align:center;
+    margin-right:300px
+    min-width:100px;
+    margin-bottom:30px
+}
+
+/* Workline */
+.workline{
+    margin-left:800px
+}
+
+/* Goals */
+.goals{
+    margin-left:800px
+}
