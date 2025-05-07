@@ -1,1 +1,82 @@
-g
+h1 {
+    color:#ccd6f6;
+}
+
+/* Projects Section */
+#projects {
+    background-color: var(--navy-dark);
+    padding: 4rem 0; /* Add padding for spacing */
+}
+
+/* Container for project cards (flexbox) */
+.projects-container {
+    display: flex;
+    gap: 2rem; /* Space between cards */
+    justify-content: center; /* Center cards horizontally */
+    flex-wrap: wrap; /* Wrap on smaller screens */
+    max-width: 1200px; /* Optional: Limit width */
+    margin: 0 auto; /* Center container */
+    padding: 0 1.5rem; /* Side padding */
+}
+
+/* Individual project card */
+.project-card {
+    background-color: var(--navy-medium);
+    border-radius: 5px;
+    padding: 2rem;
+    border: 1px solid var(--navy-light);
+    transition: all 0.3s ease;
+    flex: 1; /* Grow to fill space */
+    min-width: 300px; /* Minimum card width */
+    max-width: 350px; /* Maximum card width */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Default shadow */
+}
+
+.project-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2); /* Hover shadow */
+}
+
+/* Project card content (unchanged) */
+.project-card h3 {
+    color: var(--accent);
+    margin-bottom: 1rem;
+}
+
+.project-image {
+    margin: 1.5rem 0;
+}
+
+.project-image img {
+    width: 100%;
+    border-radius: 5px;
+    border: 1px solid var(--navy-light);
+}
+
+.project-description {
+    margin-bottom: 1.5rem;
+}
+
+.project-link a {
+    display: inline-block;
+    padding: 0.8rem 1.2rem;
+    background-color: var(--navy-light);
+    color: var(--accent);
+    border-radius: 4px;
+    transition: all 0.3s ease;
+}
+
+.project-link a:hover {
+    background-color: rgba(100, 255, 218, 0.1);
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .projects-container {
+        flex-direction: column; /* Stack vertically on small screens */
+        align-items: center; /* Center cards */
+    }
+    .project-card {
+        min-width: 80%; /* Full width on mobile */
+    }
+}

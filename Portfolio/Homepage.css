@@ -34,14 +34,20 @@
     transform:translateY(-3px);
 }
 
-.btn.projects{}
+.vertical-scroll {
+    padding-top:80px;
+}
 
-.btn.skills&resume{}
-
-.btn.contact{}
+.page-scroll {
+    min-height:100vh;
+    padding: 6rem 0;
+    position: relative
+}
 
 /* Homepage Section */
-#Homepage {    
+#Homepage { 
+   
+/* Layout */
     display:flex;
     max-width:1200;
     margin:0 auto;
@@ -53,6 +59,7 @@
 
 /* introduction */
 .introduction {
+
     font-size:32px;
     font-weight:700;
     margin-bottom:30px
@@ -83,33 +90,61 @@
 .left-side ::after {
     content:"";
     position:absolute;
-    right:0;
-    bottom:0;
-    top:0;
+    right:50%;;
+    left:50%;
+    transform:translate(-50%,-50%
+    height=70%
     width:1px
-    background-color:#303C55;
+    background-color:#303f60;
+    opacity:0.5
 }
 
 /* Right side */
-.right-side{
-    padding-left:40px;
+.right-side {
     flex:1;
+    display:flex;
+    justify-content:center;
+    padding-left:2rem;    
 }
 
 /* Profile-photo */
-.profile-photo{
-    text-align:center;
-    margin-right:300px
-    min-width:100px;
-    margin-bottom:30px
+.profile-photo {
+    position:relative;
+    max-width:400px
+}
+
+.profile-photo::before {
+    content:'';
+    position:absolute;
+    width:100%
+    height:100%
+    
 }
 
 /* Workline */
 .workline{
-    margin-left:800px
+    margin-bottom:1.5rem;
+    font-size:1.5rem;
+    color:#8892b0;
 }
 
 /* Goals */
 .goals{
-    margin-left:800px
+    margin-bottom:3rem;
+    max-width:500px;
+}
+
+@media ( max-width:992px ) {
+    #homepage {
+        flex-direction:column;
+    }
+
+    #homepage::after, left-side::after {
+        display:none;
+    }
+
+    left-side
+    right-side {
+        padding:0;
+    }
 }
