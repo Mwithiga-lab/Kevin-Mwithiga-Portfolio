@@ -1,0 +1,176 @@
+/* Skills & Resume Section */
+#skills&resume {
+    background-color: #0a192f;
+    padding: 6rem 0;
+}
+
+/* Main container */
+.skill-container {
+    display: flex;
+    min-height: 500px;
+    max-width: 1200px;
+    margin: 0 auto;
+    position: relative;
+    padding: 0 2rem;
+}
+
+/* Vertical divider line */
+.skill-container::before {
+    content: '';
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    height: 70%;
+    width: 1px;
+    background-color: #64ffda;
+    opacity: 0.3;
+}
+
+/* Skills section */
+.skill-container > div {
+    flex: 1;
+    padding: 2rem;
+}
+
+.skill-container h3 {
+    color: #ccd6f6;
+    font-size: 1.8rem;
+    margin-bottom: 2rem;
+    position: relative;
+}
+
+.skill-container h3::after {
+    content: '';
+    position: absolute;
+    bottom: -10px;
+    left: 0;
+    width: 50px;
+    height: 2px;
+    background-color: #64ffda;
+}
+
+.skill-container ol {
+    list-style: none;
+    counter-reset: skill-counter;
+    padding-left: 0;
+}
+
+/* Skills Layout */
+.skill-container li {
+    position: relative;
+    padding-left: 2.5rem;
+    margin-bottom: 1.2rem;
+    color: #a8b2d1;
+    font-size: 1.1rem;
+    line-height: 1.6;
+    counter-increment: skill-counter;
+}
+
+.skill-container li::before {
+    content: counter(skill-counter) ".";
+    position: absolute;
+    left: 0;
+    color: #64ffda;
+    font-size: 1.1rem;
+}
+
+/* Resume section */
+.resume-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+}
+
+.resume-container h3 {
+    color: #ccd6f6;
+    font-size: 1.8rem;
+    margin-bottom: 2rem;
+    position: relative;
+}
+
+.resume-container h3::after {
+    content: '';
+    position: absolute;
+    bottom: -10px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 50px;
+    height: 2px;
+    background-color: #64ffda;
+}
+
+/* Resume Image Style */
+.resume-container img {
+    width: 100%;
+    max-width: 400px;
+    border-radius: 8px;
+    margin-bottom: 2rem;
+    box-shadow: 0 10px 30px -15px rgba(2, 12, 27, 0.7);
+    transition: transform 0.3s ease;
+}
+
+.resume-container img:hover {
+    transform: translateY(-5px);
+}
+
+/*Resume Link Style */
+.resume-container a {
+    display: inline-block;
+    padding: 0.8rem 1.5rem;
+    background-color: transparent;
+    color: #64ffda;
+    border-radius: 4px;
+    transition: all 0.3s ease;
+    border: 1px solid #64ffda;
+    text-decoration: none;
+    font-size: 0.9rem;
+}
+
+.resume-container a:hover {
+    background-color: rgba(100, 255, 218, 0.1);
+    transform: translateY(-2px);
+}
+
+/* Responsive Adjustment */
+
+@media (max-width: 992px) {
+    .skill-container {
+        flex-direction: column;
+        min-height: auto;
+    }
+
+    .skill-container::before {
+        display: none;
+    }
+
+    .skill-container > div,
+    .resume-container {
+        width: 100%;
+        padding: 2rem 0;
+    }
+
+    .resume-container {
+        margin-top: 2rem;
+        align-items: flex-start;
+    }
+
+    .resume-container img {
+        max-width: 100%;
+    }
+}
+
+@media (max-width: 768px) {
+    .skill-container li {
+        font-size: 1rem;
+        padding-left: 2rem;
+    }
+
+    .skill-container h3,
+    .resume-container h3 {
+        font-size: 1.5rem;
+    }
+}
+
